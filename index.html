@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naty Dev | Desenvolvedora Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a', /* slate-900 */
+                            card: '#1e293b', /* slate-800 */
+                            accent: '#3b82f6', /* blue-500 */
+                            text: '#f1f5f9', /* slate-100 */
+                            muted: '#94a3b8' /* slate-400 */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        
+        /* Efeito de Gradiente no Texto */
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Efeito de Hover Suave nos Cards */
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        /* Fundo de Grade (Grid Background) */
+        .bg-grid {
+            background-size: 30px 30px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-brand-text font-sans antialiased">
+
+    <nav class="fixed top-0 left-0 w-full z-50 bg-brand-dark/80 backdrop-blur-sm border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold tracking-tighter flex items-center gap-2">
+                Naty<span class="text-brand-accent">Dev</span>
+            </a>
+            <div class="space-x-8 text-sm font-medium text-brand-muted hidden md:flex">
+                <a href="#sobre" class="hover:text-white transition">Sobre</a>
+                <a href="#projetos" class="hover:text-white transition">Projetos</a>
+                <a href="#tech" class="hover:text-white transition">Tecnologias</a>
+                <a href="#contato" class="bg-white text-brand-dark px-4 py-2 rounded-full font-bold hover:bg-slate-200 transition">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative min-h-screen flex items-center justify-center pt-24 pb-16 px-6 overflow-hidden">
+        <div class="absolute inset-0 bg-grid z-0"></div>
+        <div class="absolute w-[500px] h-[500px] bg-brand-accent/20 rounded-full blur-[128px] z-0 -top-20 -right-20"></div>
+        <div class="absolute w-[400px] h-[400px] bg-purple-500/15 rounded-full blur-[128px] z-0 -bottom-20 -left-20"></div>
+
+        <div class="max-w-4xl text-center relative z-10">
+            <div class="inline-flex items-center gap-2 bg-slate-800 border border-slate-700 px-4 py-1.5 rounded-full text-sm text-brand-accent mb-6">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                Disponível para novos projetos
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter mb-8 leading-[1.1]">
+                Criando soluções web <span class="gradient-text">elegantes e eficientes.</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-brand-muted mb-12 max-w-2xl mx-auto">
+                Sou Naty, uma desenvolvedora focada em transformar conceitos em aplicações web de alta performance e design impecável.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#projetos" class="flex items-center gap-2 bg-brand-accent px-8 py-3 rounded-xl font-bold hover:bg-blue-600 transition text-lg">
+                    Ver Meus Projetos
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="#sobre" class="flex items-center gap-2 bg-slate-800 border border-slate-700 px-8 py-3 rounded-xl font-bold hover:bg-slate-700 transition text-lg text-brand-muted">
+                    Conhecer Minha História
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="sobre" class="py-24 px-6 bg-slate-950/50 border-t border-slate-800 relative overflow-hidden">
+        <div class="absolute w-[300px] h-[300px] bg-purple-500/10 rounded-full blur-[100px] z-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="bg-brand-card border border-slate-700 rounded-3xl p-8 md:p-12 grid md:grid-cols-[1fr,2fr] gap-12 items-center">
+                
+                <div class="flex justify-center md:justify-start">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 anim-tilt"></div>
+                        
+                        <img src="img/profile.jpg" 
+                             alt="Sua Foto - Naty Dev" 
+                             class="relative w-64 h-64 md:w-full md:h-auto aspect-square object-cover rounded-full border-4 border-slate-700 shadow-2xl">
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex items-center gap-3 text-brand-accent mb-4">
+                        <i data-lucide="user" class="w-6 h-6"></i>
+                        <span class="text-lg font-semibold tracking-wide uppercase">Sobre Mim</span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-8">Olá, eu sou a Natasha!</h2>
+                    
+                    <div class="space-y-6 text-lg text-brand-muted leading-relaxed">
+<p>
+Minha jornada na tecnologia começou em 2014, quando iniciei um curso técnico em informática. Foi ali que descobri meu interesse pelo desenvolvimento de soluções digitais.
+</p>
+
+<p>
+Em 2024 me formei em Análise e Desenvolvimento de Sistemas, período em que também desenvolvi projetos web e aprofundei meus conhecimentos na área.
+</p>
+
+<p>
+Acredito que um bom site vai além da aparência: ele precisa ser funcional, intuitivo e resolver problemas reais.
+</p>            </div>
+
+                    <div class="mt-10 flex gap-4">
+                        <a href="#contato" class="bg-white text-brand-dark px-6 py-2.5 rounded-xl font-bold hover:bg-slate-200 transition">Entrar em Contato</a>
+                        <a href="https://github.com/Natygamer02" target="_blank" class="flex items-center gap-2 text-brand-muted hover:text-white transition">
+                            <i data-lucide="github" class="w-5 h-5"></i>
+                            Meu GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="py-24 px-6 bg-brand-dark border-t border-slate-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-4">Projetos em Destaque</h2>
+                <p class="text-xl text-brand-muted max-w-xl mx-auto">Uma amostra do meu trabalho recente e habilidades técnicas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <div class="project-card bg-brand-card rounded-2xl overflow-hidden border border-slate-700">
+                    <div class="relative group overflow-hidden bg-slate-800 border-b border-slate-700">
+                        <img src="img/biblioteca_digital.png" alt="Thumbnail Projeto 1" class="w-full h-auto min-h-[250px] max-h-[400px] object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <a href="https://intervox.nce.ufrj.br/~comjuntos/biblioteca/index.html" target="_blank" class="p-3 bg-white/10 rounded-full hover:bg-white/20 transition">
+                                <i data-lucide="external-link" class="w-6 h-6 text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3">Biblioteca Digital</h3>
+                        <p class="text-brand-muted mb-6">Sistema web desenvolvido para a Secretaria de Educação de Petrópolis com o objetivo de organizar e disponibilizar um acervo digital de forma prática e acessível. A plataforma permite a consulta e organização de livros, facilitando o acesso às informações e contribuindo para a gestão do acervo da biblioteca de maneira mais eficiente.</p>
+                        
+                       <div class="flex gap-2 mb-6 text-xs">
+    <span class="bg-orange-950 text-orange-400 px-3 py-1 rounded-full font-semibold border border-orange-900/50">HTML</span>
+    
+    <span class="bg-blue-950 text-blue-400 px-3 py-1 rounded-full font-semibold border border-blue-900/50">CSS</span>
+    
+    <span class="bg-yellow-950 text-yellow-500 px-3 py-1 rounded-full font-semibold border border-yellow-900/50">JavaScript</span>
+</div>
+                        
+                        <div class="flex items-center gap-6 pt-4 border-t border-slate-700">
+                            <a href="https://intervox.nce.ufrj.br/~comjuntos/biblioteca/index.html" target="_blank" class="flex items-center gap-2 text-brand-accent font-semibold hover:text-blue-400 transition">
+                                <i data-lucide="eye" class="w-5 h-5"></i>
+                            Ver Projeto
+                            </a>
+                            <a href="#" target="_blank" class="flex items-center gap-2 text-brand-muted hover:text-white transition">
+                                <i data-lucide="github" class="w-5 h-5"></i>
+                                Ver Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card bg-brand-card rounded-2xl overflow-hidden border border-slate-700">
+                    <div class="relative group overflow-hidden bg-slate-800 border-b border-slate-700">
+                        <img src="img/refrigeração_1.png" alt="Thumbnail Projeto 2" class="w-full h-auto min-h-[250px] max-h-[400px] object-cover object-top group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-brand-dark/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-4 backdrop-blur-sm">
+                            <a href="https://refrigeracoesrufino.com.br/" target="_blank" class="p-3 bg-white/10 rounded-full hover:bg-white/20 transition">
+                                <i data-lucide="external-link" class="w-6 h-6 text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-3">Empresa de Refrigeração</h3>
+                        <p class="text-brand-muted mb-6">Site institucional desenvolvido para uma empresa de refrigeração com o objetivo de apresentar os serviços oferecidos e facilitar o contato com clientes. O projeto foi criado com foco em simplicidade, navegação intuitiva e adaptação para dispositivos móveis, permitindo que potenciais clientes encontrem rapidamente informações sobre manutenção, instalação e assistência técnica.</p>
+                        
+                                               <div class="flex gap-2 mb-6 text-xs">
+    <span class="bg-orange-950 text-orange-400 px-3 py-1 rounded-full font-semibold border border-orange-900/50">HTML</span>
+    
+    <span class="bg-blue-950 text-blue-400 px-3 py-1 rounded-full font-semibold border border-blue-900/50">CSS</span>
+    
+    <span class="bg-yellow-950 text-yellow-500 px-3 py-1 rounded-full font-semibold border border-yellow-900/50">JavaScript</span>
+</div>
+                        
+                        <div class="flex items-center gap-6 pt-4 border-t border-slate-700">
+                            <a href="https://refrigeracoesrufino.com.br/" target="_blank" class="flex items-center gap-2 text-brand-accent font-semibold hover:text-blue-400 transition">
+                                <i data-lucide="eye" class="w-5 h-5"></i>
+                                Ver Projeto
+                            </a>
+                            <a href="#" target="_blank" class="flex items-center gap-2 text-brand-muted hover:text-white transition">
+                                <i data-lucide="github" class="w-5 h-5"></i>
+                                Ver Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+<section id="tech" class="py-24 px-6 bg-slate-950/50 border-t border-slate-800">
+    <div class="max-w-5xl mx-auto text-center overflow-hidden">
+        <h2 class="text-3xl font-bold tracking-tighter mb-12">Minhas Ferramentas</h2>
+        
+        <div class="flex flex-wrap justify-center gap-6 text-brand-muted">
+            <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl flex flex-col items-center gap-3 w-32 transition hover:border-orange-500/50 group">
+                <i data-lucide="code-xml" class="w-10 h-10 text-orange-400 group-hover:scale-110 transition"></i>
+                <span class="font-medium text-sm">HTML5</span>
+            </div>
+
+            <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl flex flex-col items-center gap-3 w-32 transition hover:border-blue-500/50 group">
+                <i data-lucide="palette" class="w-10 h-10 text-blue-400 group-hover:scale-110 transition"></i>
+                <span class="font-medium text-sm">CSS3</span>
+            </div>
+
+            <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl flex flex-col items-center gap-3 w-32 transition hover:border-yellow-500/50 group">
+                <i data-lucide="braces" class="w-10 h-10 text-yellow-400 group-hover:scale-110 transition"></i>
+                <span class="font-medium text-sm">JavaScript</span>
+            </div>
+
+            <div class="bg-slate-800 border border-slate-700 p-6 rounded-xl flex flex-col items-center gap-3 w-32 transition hover:border-purple-500/50 group">
+                <i data-lucide="database" class="w-10 h-10 text-purple-400 group-hover:scale-110 transition"></i>
+                <span class="font-medium text-sm">Bancos de Dados</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer id="contato" class="py-16 px-6 border-t border-slate-800 bg-slate-950">
+        <div class="max-w-7xl mx-auto text-center">
+            <h3 class="text-3xl font-bold tracking-tighter mb-6">Vamos Conversar?</h3>
+            <p class="text-xl text-brand-muted mb-10 max-w-md mx-auto">Se você tem um projeto em mente ou quer tirar uma dúvida, fique à vontade para entrar em contato!</p>
+            <div class="flex justify-center gap-6 text-brand-muted mb-12">
+                <a href="mailto:seuemail@exemplo.com" class="hover:text-white transition p-3 border border-slate-700 rounded-full">
+                    <i data-lucide="mail" class="w-6 h-6"></i>
+                </a>
+                <a href="https://github.com/Natygamer02" target="_blank" class="hover:text-white transition p-3 border border-slate-700 rounded-full">
+                    <i data-lucide="github" class="w-6 h-6"></i>
+                </a>
+            </div>
+            <p class="text-sm text-slate-600">© 2026 Naty Dev • Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
